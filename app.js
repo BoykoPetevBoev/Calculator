@@ -7,8 +7,10 @@ const operators = {
     '+': () => result = Number(a) + Number(b),
     '-': () => result = Number(a) - Number(b),
     'x': () => result = Number(a) * Number(b),
-    '/': () => result = Number(a) / Number(b)
+    '/': () => result = Number(a) / Number(b),
+    '*': () => result = Number(a) * Number(b),
 }
+
 let operatorClicked = false;
 let endCalculation = false;
 let operator = '';
@@ -18,6 +20,16 @@ let result = 0;
 
 body.addEventListener('click', function (e) {
     const value = e.target.value;
+    eventHandler(value);
+});
+document.addEventListener('keyup', function (e) {
+    let value = e.key;
+    if (value == 'Enter') {
+        value = '=';
+    }
+    eventHandler(value);
+});
+function eventHandler(value) {
     if (nums.includes(value) && !endCalculation && !operatorClicked) {
         a = createVariable(a, value);
         showInfo();
@@ -55,8 +67,8 @@ body.addEventListener('click', function (e) {
         operatorClicked = false;
         endCalculation = false;
     }
-});
-function createVariable(x, value){
+}
+function createVariable(x, value) {
     if (value === '.' && !x.includes(value) && x != '') {
         x += value;
     } else if (value != '.') {
