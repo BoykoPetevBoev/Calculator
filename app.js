@@ -17,6 +17,7 @@ let operator = '';
 let a = '';
 let b = '';
 let result = 0;
+const historyArr = [];
 
 body.addEventListener('click', function (e) {
     const value = e.target.value;
@@ -58,6 +59,8 @@ function eventHandler(value) {
         operatorClicked = true;
     }
     else if (value === 'clear') {
+        historyArr.unshift(`${a} ${operator} ${b} = ${result}`);
+        printHistory();
         result1.textContent = '';
         result2.textContent = '';
         a = '';
@@ -67,6 +70,15 @@ function eventHandler(value) {
         operatorClicked = false;
         endCalculation = false;
     }
+}
+function printHistory(){
+    const history = document.getElementById('historyDiv');
+    history.innerHTML = '<h2>HISTORY 4.0</h2>';
+    historyArr.forEach(element => {
+        const h1 = document.createElement('h1');
+        h1.innerHTML = element;
+        history.appendChild(h1);
+    });
 }
 function createVariable(x, value) {
     if (value === '.' && !x.includes(value) && x != '') {
