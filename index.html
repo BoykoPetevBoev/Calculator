@@ -12,50 +12,54 @@
 </head>
 
 <body id="body">
-    <div class="calculator">
-        <div class="result">
-
-            <div class="result1">
-                <h1 id="result1"></h1>
+    <header>
+        <h1>CALCULATOR 4.0</h1>
+    </header>
+        <div class="calculator">
+            <div class="result">
+                <div class="result1">
+                    <h1 id="result1"></h1>
+                </div>
+                <div class="result1">
+                    <h1 id="result2"></h1>
+                </div>
             </div>
-            <div class="result1">
-                <h1 id="result2"></h1>
+            <div class="buttons">
+                <div>
+                    <button value="(" class="operations">(</button>
+                    <button value=")" class="operations">)</button>
+                    <button value="%" class="operations">%</button>
+                    <button id="clear" value="clear" class="operations">C</button>
+                </div>
+                <div>
+                    <button value="7">7</button>
+                    <button value="8">8</button>
+                    <button value="9">9</button>
+                    <button value="/" class="operations">/</button>
+                </div>
+                <div>
+                    <button value="4">4</button>
+                    <button value="5">5</button>
+                    <button value="6">6</button>
+                    <button value="x" class="operations">*</button>
+                </div>
+                <div>
+                    <button value="1">1</button>
+                    <button value="2">2</button>
+                    <button value="3">3</button>
+                    <button value="-" class="operations">-</button>
+                </div>
+                <div>
+                    <button value="0">0</button>
+                    <button value=".">.</button>
+                    <button value='=' id='run'>=</button>
+                    <button value="+" class="operations">+</button>
+                </div>
             </div>
         </div>
-        <div class="buttons">
-            <div>
-                <button value="(" class="operations">(</button>
-                <button value=")" class="operations">)</button>
-                <button value="%" class="operations">%</button>
-                <button id="clear" value="clear" class="operations">C</button>
-            </div>
-            <div>
-                <button value="7">7</button>
-                <button value="8">8</button>
-                <button value="9">9</button>
-                <button value="/" class="operations">/</button>
-            </div>
-            <div>
-                <button value="4">4</button>
-                <button value="5">5</button>
-                <button value="6">6</button>
-                <button value="x" class="operations">*</button>
-            </div>
-            <div>
-                <button value="1">1</button>
-                <button value="2">2</button>
-                <button value="3">3</button>
-                <button value="-" class="operations">-</button>
-            </div>
-            <div>
-                <button value="0">0</button>
-                <button value=".">.</button>
-                <button value='=' id='run'>=</button>
-                <button value="+" class="operations">+</button>
-            </div>
+        <div id="historyDiv">
+            <h2>HISTORY</h2>
         </div>
-
-    </div>
 </body>
 
 </html>
