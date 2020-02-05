@@ -1,13 +1,23 @@
 body  {
+    color: white;
     background-color: black;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif
+}
+header {
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(0, 255, 0);
+}
+h1{
+    color: aliceblue;
 }
 .calculator {
     margin: auto;
     margin-top: 20px;
     padding: 30px;
-    width: 600px;
+    width: 900px;
+    height: 600px;
     border: solid;
     border-width: 1px;
     border-color: white;
@@ -56,4 +66,13 @@ button:hover {
 }
 #result2 {
     color: rgb(0, 255, 0);
+}
+#historyDiv {
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 940px;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
 }
