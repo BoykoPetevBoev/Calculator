@@ -73,7 +73,7 @@ function eventHandler(value) {
 }
 function printHistory(){
     const history = document.getElementById('historyDiv');
-    history.innerHTML = '<h2>HISTORY 4.0</h2>';
+    history.innerHTML = '<h2>HISTORY</h2>';
     historyArr.forEach(element => {
         const h1 = document.createElement('h1');
         h1.innerHTML = element;
