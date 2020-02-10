@@ -59,8 +59,10 @@ function eventHandler(value) {
         operatorClicked = true;
     }
     else if (value === 'clear') {
-        historyArr.unshift(`${a} ${operator} ${b} = ${result}`);
-        printHistory();
+        if(a !== '' && operator !== '' && b !== '' && result != 0){
+            historyArr.unshift(`${a} ${operator} ${b} = ${result}`);
+            printHistory();
+        }
         result1.textContent = '';
         result2.textContent = '';
         a = '';
@@ -81,7 +83,10 @@ function printHistory(){
     });
 }
 function createVariable(x, value) {
-    if (value === '.' && !x.includes(value) && x != '') {
+    if(value === '.' && !x.includes(value) && x === ''){
+        x += `0${value}`;
+    }
+    else if (value === '.' && !x.includes(value) && x != '') {
         x += value;
     } else if (value != '.') {
         x += value;
