@@ -13,7 +13,7 @@
 
 <body id="body">
     <header>
-        <h1>CALCULATOR 4.0</h1>
+        <h1>CALCULATOR 5.5</h1>
     </header>
     <div class="calculator">
         <div class="result">
@@ -26,37 +26,39 @@
         </div>
         <div class="buttons">
             <div class="line">
-                <button value="+" class="operations">+</button>
-                <button value="-" class="operations">-</button>
-                <button value="x" class="operations">*</button>
-                <button value="/" class="operations">/</button>
-            </div>
-            <div class="line">
                 <button value="7">7</button>
                 <button value="8">8</button>
                 <button value="9">9</button>
-                <button value="%" class="sideBtn">%</button>
             </div>
             <div class="line">
                 <button value="4">4</button>
                 <button value="5">5</button>
                 <button value="6">6</button>
-                <button id="clear" value="clear" class="sideBtn">C</button>
             </div>
             <div class="line">
                 <button value="1">1</button>
                 <button value="2">2</button>
                 <button value="3">3</button>
-                <button value="CE" class="sideBtn">CE</button>
             </div>
             <div class="line">
                 <button value="0">0</button>
+                <button value="00">00</button>
                 <button value=".">.</button>
-                <button value='=' id='run'>=</button>
             </div>
         </div>
+        <div class="operators">
+            <button value="/" class="operations">÷</button>
+            <button value="x" class="operations">×</button>
+            <button value="-" class="operations">−</button>
+            <button value="+" class="operations">+</button>
+        </div>
+        <div class="commands">
+            <button id="clear" value="clear" class="sideBtn">C</button>
+            <button value="CE" class="sideBtn">⬅</button>
+            <button value='=' id='run'>=</button>
+        </div>
         <div id="historyDiv">
-            <h2>HISTORY</h2>
+            <h2></h2>
         </div>
     </div>
 </body>
