@@ -17,22 +17,29 @@ h1{
     margin: auto;
     margin-top: 20px;
     padding: 30px;
-    width: 900px;
+    width: 1200px;
     height: 600px;
     border: solid;
     border-width: 1px;
     border-color: rgb(53, 53, 53);
 }
-
 .buttons {
     background-color: rgb(20, 20, 20);
     float: left;
-    border: solid;
-    border-width: 0px;
-    border-color: rgb(20, 20, 20);
+}
+.operators {
+    float: left;
+    width: 120px;
+    height: 71px;
+
+    background-color: black;
+}
+.commands {
+    float: left;
+    width: 120px;
 }
 .sideBtn {
-    color: rgb(0, 255, 0);
+    color: white;
     width: 119px;
 }
 button {
@@ -59,9 +66,9 @@ button:hover {
 .operations {
     color: rgb(0, 255, 0);
     background-color: rgb(20, 20, 20);
-    border-top: solid;
-    border-top-width: 1px;
-    border-top-color: rgb(53, 53, 53);
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(20, 20, 20);
 }
 .result {
     padding: auto;
@@ -76,18 +83,16 @@ button:hover {
 }
 #run {
     background-color: black;
-    height: 70px;
-    width: 240px;
-    color: rgb(0, 255, 0);
+    height: 140px;
+    width: 120px;
+    color: white;
 }
 #result2 {
     color: rgb(0, 255, 0);
 }
 #historyDiv {
-    float: left;
-    width: 394px;
-    height: 333px;
-    padding: 10px;
+    width: 1150px;
+    padding: 5px;
     border: solid;
     border-width: 1px;
     border-color: rgb(53, 53, 53);
