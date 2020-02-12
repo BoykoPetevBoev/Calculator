@@ -2,7 +2,7 @@ const body = document.getElementById('body');
 const result1 = document.getElementById('result1');
 const result2 = document.getElementById('result2');
 
-const nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
+const nums = ['00', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 const operators = {
     '+': () => result = Number(a) + Number(b),
     '-': () => result = Number(a) - Number(b),
@@ -75,7 +75,7 @@ function eventHandler(value) {
 }
 function printHistory(){
     const history = document.getElementById('historyDiv');
-    history.innerHTML = '<h2>HISTORY</h2>';
+    history.innerHTML = '<h2></h2>';
     historyArr.forEach(element => {
         const h1 = document.createElement('h1');
         h1.innerHTML = element;
@@ -97,5 +97,5 @@ function showInfo() {
     result1.textContent = `${a} ${operator} ${b}`;
 }
 function printResult() {
-    result2.textContent = result;
+    result2.textContent = '= ' + result;
 }
