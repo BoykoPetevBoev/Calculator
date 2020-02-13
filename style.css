@@ -13,6 +13,7 @@ h1{
     color: aliceblue;
 }
 .calculator {
+    text-align: center;
     background-color: rgb(20, 20, 20);
     margin: auto;
     margin-top: 20px;
@@ -25,22 +26,27 @@ h1{
 }
 .buttons {
     background-color: rgb(20, 20, 20);
+    width: 363px;
+    height: 284px;
+    margin: auto;
     float: left;
 }
 .operators {
-    float: left;
+    margin: auto;
     width: 120px;
-    height: 71px;
-
-    background-color: black;
+    height: 284px;
+    background-color: rgb(20, 20, 20);
+    float: left;
 }
 .commands {
-    float: left;
+    margin: auto;
     width: 120px;
+    height: 284px;
+    float: left;
 }
 .sideBtn {
     color: white;
-    width: 119px;
+    width: 120px;
 }
 button {
     border: unset;
@@ -83,7 +89,7 @@ button:hover {
 }
 #run {
     background-color: black;
-    height: 140px;
+    height: 141px;
     width: 120px;
     color: white;
 }
@@ -91,7 +97,6 @@ button:hover {
     color: rgb(0, 255, 0);
 }
 #historyDiv {
-    width: 1150px;
     padding: 5px;
     border: solid;
     border-width: 1px;
