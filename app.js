@@ -2,6 +2,19 @@ const body = document.getElementById('body');
 const result1 = document.getElementById('result1');
 const result2 = document.getElementById('result2');
 
+const one = document.getElementById('one');
+const two = document.getElementById('two');
+const three = document.getElementById('three');
+const four = document.getElementById('four');
+const five = document.getElementById('five');
+const six = document.getElementById('six');
+const seven = document.getElementById('seven');
+const eigh = document.getElementById('eigh');
+const nine = document.getElementById('nine');
+const ten = document.getElementById('ten');
+const divNumbers = [one, two, three, four, five, six, seven, eigh, nine, ten];
+printTable();
+
 const validBtns = ['00', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 const resultCalculations = {
     '+': () => result = Number(a) + Number(b),
@@ -63,6 +76,18 @@ function eventHandler(value) {
     }
     else if (conditionForDelete) {
         backspace();
+    }
+}
+function printTable(){
+    for(let i in divNumbers){
+        for(let j of divNumbers){
+            const num = Number(i) + 1;
+            console.log(j, num, divNumbers[i])
+            const p = document.createElement('p');
+            const div = divNumbers[i];
+            p.textContent = `${num} x ${divNumbers.indexOf(j) + 1} = ${Number(num) * Number(divNumbers.indexOf(j) + 1)}`;
+            div.appendChild(p);
+        }
     }
 }
 function continueCalc(){
