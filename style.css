@@ -1,7 +1,8 @@
 body  {
     color: white;
-    background: rgb(24,24,24);
-    background: radial-gradient(circle, rgba(24,24,24,1) 0%, rgba(0,0,0,1) 100%);
+    /* background: rgb(24,24,24);
+    background: radial-gradient(circle, rgba(24,24,24,1) 0%, rgba(0,0,0,1) 100%); */
+    background-color: black;
     font-family: monospace;
     padding: 0px;
     margin: 0px;
@@ -11,8 +12,8 @@ body  {
 }
 header {
     border-bottom: solid;
-    border-bottom-width: 2px;
-    border-bottom-color: rgb(0, 255, 0);
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(0, 200, 0);
     text-align: center;
     background-color: black;
     padding: 20px;
@@ -43,7 +44,7 @@ h1{
     width: 650px;
     height: 600px;
     border: solid;
-    border-width: 1px;
+    border-width: 0px;
     border-color: rgb(15,187,0);
     background-color: black;
     background: rgb(15,187,0);
@@ -131,7 +132,7 @@ button:focus { outline: none; }
 #historyDiv {
     padding: 5px;
     border: solid;
-    border-width: 1px;
+    border-width: 0px;
     border-color: rgb(0, 255, 0);
     float: right;
     width: 30%;
