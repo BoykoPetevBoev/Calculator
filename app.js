@@ -31,7 +31,6 @@ let a = '';
 let b = '';
 let result = 0;
 const maxLengthNum = 16;
-const historyArr = [];
 
 calculator.addEventListener('click', function (e) {
     const value = e.target.value;
@@ -52,12 +51,12 @@ function eventHandler(value) {
     const conditionForDelete = value === 'CE' && endCalculation === false;
     const conditionForContinueCalc = resultCalculations.hasOwnProperty(value) && endCalculation;
     if (conditionA) {
-            a = createVariable(a, value);
-            showInfo();
+        a = createVariable(a, value);
+        showInfo();
     }
     else if (conditionB) {
-            b = createVariable(b, value);
-            showInfo();
+        b = createVariable(b, value);
+        showInfo();
     }
     else if (conditionOperator) {
         operator = value;
@@ -117,8 +116,8 @@ function backspace() {
 }
 function clearCalculation() {
     if (a !== '' && operator !== '' && b !== '' && result != 0) {
-        historyArr.unshift(`${a} ${operator} ${b} = ${result}`);
-        printHistory();
+        const line = `${a} ${operator} ${b} = ${result}`;
+        printHistory(line);
     }
     result1.textContent = '';
     result2.textContent = '';
@@ -129,14 +128,12 @@ function clearCalculation() {
     operatorClicked = false;
     endCalculation = false;
 }
-function printHistory() {
+
+function printHistory(line) {
     const history = document.getElementById('historyDiv');
-    history.innerHTML = '<h3></h3>';
-    historyArr.forEach(element => {
-        const h3 = document.createElement('h3');
-        h3.innerHTML = element;
-        history.appendChild(h3);
-    });
+    const h3 = document.createElement('h3');
+    h3.innerHTML = line;
+    history.appendChild(h3);
 }
 function createVariable(x, value) {
     if (value === '.' && !x.includes(value) && x === '') {
@@ -172,7 +169,8 @@ function startTime() {
     var t = setTimeout(startTime, 500);
     function checkTime(i) {
         i = Number(i);
-      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-      return i;
+        if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+        return i;
     }
-  }
+}
+
