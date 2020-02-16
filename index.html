@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <script type="module" src="app.js"></script>
@@ -15,10 +16,15 @@
     <header>
         <h1 id="clock"></h1>
     </header>
+    <!-- <div class="info">
+        <p>Info</p>
+    </div> -->
     <div id="historyDiv">
-        <h3></h3>
+        <div class="historyBtnEffect">
+            <button class="historyBtn" data-hover="CLEAR" onclick="clearHistory()">HISTORY</button>
+        </div>
     </div>
-    <div class="all"> 
+    <div class="all">
         <div id="calculator">
             <div id="result">
                 <div class="result1">
@@ -92,5 +98,11 @@
         <a href="https://github.com/BoykoPetevBoev/Calculator"> GitHub</a>
     </footer>
 </body>
+<script>
+    function clearHistory() {
+        const history = document.getElementById('historyDiv');
+        history.innerHTML = `<div class="historyBtnEffect"><button class="historyBtn" data-hover="CLEAR" onclick="clearHistory()">HISTORY</button></div>`
+    }
+</script>
 
 </html>
