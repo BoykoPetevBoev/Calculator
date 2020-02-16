@@ -3,7 +3,10 @@ body  {
     /* background: rgb(24,24,24);
     background: radial-gradient(circle, rgba(24,24,24,1) 0%, rgba(0,0,0,1) 100%); */
     background-color: black;
-    font-family: monospace;
+    font-family:  sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.2;
     padding: 0px;
     margin: 0px;
     margin-top: 0px;
@@ -17,13 +20,12 @@ header {
     text-align: center;
     background-color: black;
     padding: 20px;
-    box-shadow: 0px 0px 20px 5px black;
+    box-shadow: 0px 0px 10px rgb(0, 200, 0);
 }
 footer {
     border-top: solid;
     border-top-width: 1px;
     border-top-color: rgb(0, 255, 0);
-
     padding-top: 25px;
     background-color: black;
     margin-top: 300px;
@@ -49,6 +51,7 @@ h1{
     background-color: black;
     background: rgb(15,187,0);
     background: radial-gradient(circle, rgba(15,187,0,1) 0%, rgba(0,0,0,1) 60%);
+
 }
 .buttons {
     width: 363px;
@@ -112,7 +115,6 @@ button:focus { outline: none; }
     border-top-color: red;
     background-color: transparent;
 }
-
 #result {
     padding: auto;
     margin-top: 10px;
@@ -129,14 +131,62 @@ button:focus { outline: none; }
 #result2 {
     color: rgb(0, 255, 0);
 }
-#historyDiv {
-    padding: 5px;
+.info {
+    padding: 2px;
     border: solid;
     border-width: 0px;
-    border-color: rgb(0, 255, 0);
+    border-color: rgb(0, 200, 0);
+    float: left;
+    width: 30%;
+    height: 1006px;
+    margin-top: 50px;
+    /* box-shadow: 0px 0px 10px rgb(0, 200, 0); */
+    background-color: black;
+    background: rgb(15,187,0);
+    background: linear-gradient(90deg, rgba(15,187,0,1) 0%, rgba(0,0,0,1) 26%);
+}
+#historyDiv {
+    padding: 2px;
+    border-left: solid;
+    border-left-width: 0px;
+    border-left-color: rgb(0, 200, 0);
     float: right;
     width: 30%;
     margin-top: 50px;
+    margin-right: 50px;
+    /* box-shadow: 0px 0px 10px rgb(0, 200, 0); */
+    background-color: black;
+
+}
+.historyBtn{
+    color: white;
+    width: 99%;
+    height: 40px;
+    background-color: black;
+    margin-bottom: 20px;
+}
+.historyBtn:hover{
+    border: none;
+    color: white;
+    font-size: 0px;
+    background: none;
+    background-color: black;
+    background: rgb(15,187,0);
+    background: radial-gradient(circle, rgba(15,187,0,1) 0%, rgba(0,0,0,1) 60%);
+}
+.historyBtn:hover:after{
+    content: attr(data-hover);
+    font-size: 25px;
+}
+.historyBtn:active{
+    background: none;
+    background-color: black;
+}
+.historyBtnEffect{
+    padding: 1px;
+    height: 40px;
+    background: rgb(15,187,0);
+    background: radial-gradient(circle, rgba(15,187,0,1) 0%, rgba(0,0,0,1) 60%);
 }
 #one, #two, #three, #four, #five, #six, #seven, #eigh, #nine, #ten{
     height: 300px;
