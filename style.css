@@ -16,11 +16,19 @@ body  {
 header {
     border-bottom: solid;
     border-bottom-width: 1px;
-    border-bottom-color: rgb(0, 200, 0);
+    border-bottom-color: rgb(15,187,0);
     text-align: center;
-    background-color: black;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgb(0, 200, 0);
+    background: rgb(0,0,0);
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,183,0,1) 50%, rgba(0,0,0,1) 100%); */
+    padding: auto;
+    /* box-shadow: 0px 0px 10px rgb(0, 200, 0); */
+    height: 60px;
+    /* border: 1px solid;
+    border-image: linear-gradient(1deg, rgb(15,187,0), black, black) 10; */
+}
+header img {
+    float: left;
+    height: 60px;
 }
 footer {
     border-top: solid;
@@ -38,12 +46,17 @@ h1{
     color: aliceblue;
     text-align: center;
 }
+p{
+    font-size: 20px;
+    margin: 10px;
+}
 #calculator {
     text-align: center;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 50px;
     padding: 30px;
-    width: 650px;
+    width: 605px;
     height: 600px;
     border: solid;
     border-width: 0px;
@@ -51,7 +64,6 @@ h1{
     background-color: black;
     background: rgb(15,187,0);
     background: radial-gradient(circle, rgba(15,187,0,1) 0%, rgba(0,0,0,1) 60%);
-
 }
 .buttons {
     width: 363px;
@@ -127,23 +139,36 @@ button:focus { outline: none; }
     color: rgb(0, 255, 0);
     background-color: black;
 }
-
+#result1 {
+    color: white;
+    font-size: 28px;
+}
 #result2 {
-    color: rgb(0, 255, 0);
+    color: rgb(0, 200, 0);
+    font-size: 40px;
 }
 .info {
-    padding: 2px;
+    padding-top: 1px;
     border: solid;
     border-width: 0px;
     border-color: rgb(0, 200, 0);
     float: left;
     width: 30%;
-    height: 1006px;
+    height: 455px;
     margin-top: 50px;
     /* box-shadow: 0px 0px 10px rgb(0, 200, 0); */
+    /* background: rgb(15,187,0);
+    background: linear-gradient(90deg, rgba(15,187,0,1) 46%, rgba(0,0,0,1) 100%); */
+}
+.info div {
     background-color: black;
-    background: rgb(15,187,0);
-    background: linear-gradient(90deg, rgba(15,187,0,1) 0%, rgba(0,0,0,1) 26%);
+    height: 157px;
+    text-align: center;
+    padding: 1px;
+    margin-bottom: 1px;
+}
+#info2 {
+    height: 284px;
 }
 #historyDiv {
     padding: 2px;
@@ -196,8 +221,18 @@ button:focus { outline: none; }
     border-color: white;
     float: left;
 }
-#clock {
-    margin: 0px;
+.clock {
+    background-color: black;
+    border: 1px solid black;
+    /* box-shadow: 0px 0px 10px rgb(0, 200, 0); */
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    border-image: linear-gradient(0deg, rgb(15,187,0), rgb(15,187,0), black, black) 1;
 }
-
+#time {
+    color: rgb(15,187,0);
+    font-size: 30px;
+}
 
