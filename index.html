@@ -10,15 +10,23 @@
 
     <link rel="stylesheet" href="style.css">
     <script type="module" src="app.js"></script>
+    <script src="dateAndTime.js"></script>
 </head>
 
 <body id="body">
     <header>
-        <h1 id="clock"></h1>
+        <div class="clock">
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
     </header>
-    <!-- <div class="info">
-        <p>Info</p>
-    </div> -->
+    <div class="info">
+        <div id="info1">
+            <p>INFO</p>
+        </div>
+        <div id="info2">
+        </div>
+    </div>
     <div id="historyDiv">
         <div class="historyBtnEffect">
             <button class="historyBtn" data-hover="CLEAR" onclick="clearHistory()">HISTORY</button>
@@ -28,10 +36,10 @@
         <div id="calculator">
             <div id="result">
                 <div class="result1">
-                    <h1 id="result1"></h1>
+                    <p id="result1"></p>
                 </div>
                 <div class="result1">
-                    <h1 id="result2"></h1>
+                    <p id="result2"></p>
                 </div>
             </div>
             <div class="buttons">
@@ -70,14 +78,14 @@
             <div class="moreBtns">
                 <button value="%">%</button>
                 <button value="√">√</button>
+                <button value="a^b">a^b</button>
                 <button value="±">±</button>
-                <button value=""></button>
-                <button value=""></button>
+                <button value="π">π</button>
                 <button value="½">½</button>
-                <button value="¼">¼</button>
+                <button value="⅓">⅓</button>
+                <button value="⅔">⅔</button>
                 <button value="¾">¾</button>
-                <button value=""></button>
-                <button value=""></button>
+                <button value="⅞">⅞</button>
             </div>
         </div>
     </div>
