@@ -27,7 +27,8 @@ const resultCalculations = {
     '+': () => result = Number(a) + Number(b),
     '-': () => result = Number(a) - Number(b),
     'x': () => result = Number(a) * Number(b),
-    '/': () => result = Number(a) / Number(b)
+    '/': () => result = Number(a) / Number(b),
+    '%': () => result = Number(a) / 100 * Number(b)
 }
 let end = false;
 let operator = '';
@@ -46,12 +47,15 @@ function eventHandler(value) {
     }
     else if (value === 'clear') {
         clearCalculation();
+        printInfo(0, 0);
     }
     else if (value === 'CE' && end === false) {
         backspace();
+        printInfo(a, b);
     }
     else if (value === '±' && end === false) {
         changeSign();
+        printInfo(a, b);
     }
     else if (conditionFractionalExpression) {
         calculateFractionalExpression(value);
@@ -65,9 +69,7 @@ function eventHandler(value) {
             b = Math.PI;
             showExpression(`${a} ${operator} ${b}`);
         }
-    }
-    else if(value === '%' && end === false){
-        
+        printInfo(a, b);
     }
 }
 function createExpression(value) {
@@ -77,10 +79,12 @@ function createExpression(value) {
     const conditionContinue = end === true && resultCalculations.hasOwnProperty(value);
     if (conditionA) {
         a = createVariable(a, value);
+        printInfo(a, 0);
         showExpression(a);
     }
     else if (conditionB) {
         b = createVariable(b, value);
+        printInfo(a, b);
         showExpression(`${a} ${operator} ${b}`);
     }
     else if (conditionOperator) {
@@ -197,6 +201,19 @@ function printHistory(line) {
     const p = document.createElement('p');
     p.innerHTML = line;
     history.appendChild(p);
+}
+function printInfo(infoA, infoB){
+    if(infoA == ''){
+        infoA = 0;
+    }
+    if(infoB == ''){
+        infoB = 0;
+    }
+    if(operator == '-'){
+        infoB = '-' + infoB;
+    }
+    const div = document.getElementById('infoAB');
+    div.innerHTML = `<p>A = ${infoA}</p><p>B = ${infoB}</p>`;
 }
 
 
