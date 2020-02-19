@@ -1,4 +1,4 @@
-# Calculator Version 6.5
+# Calculator
 Standard calculator for math.
 
 ## Opportunities
