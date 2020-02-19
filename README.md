@@ -5,30 +5,31 @@ Commands for the online calculator you can enter not only the mouse, but with a 
 
 ## Opportunities
 
-[ 0 ], [ 1 ], [ 2 ], ... [ 9 ] - standard number keys;
-[ 00 ] - key input 2 zeros;
+[ 0 ], [ 1 ], [ 2 ], ... [ 9 ] - standard number keys.
+[ 00 ] - key input 2 zeros.
 ```
 const validBtns = ['00', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 ```
 
-[ +/- ] - change the mathematical sign of;
-[ √ ] - calculate the square root;
-[ + ] - addition;
-[ - ] - subtraction;
-[ х ] - multiplication;
-[ ÷ ] - division;
-[ % ] - calculates percentages;
+[ + ] - addition.
+[ - ] - subtraction.
+[ х ] - multiplication.
+[ ÷ ] - division.
+[ % ] - calculates percentages.
+[ √ ] - calculate the square root.
 ```
 const resultCalculations = {
     '+': () => result = Number(a) + Number(b),
     '-': () => result = Number(a) - Number(b),
     'x': () => result = Number(a) * Number(b),
-    '/': () => result = Number(a) / Number(b)
+    '/': () => result = Number(a) / Number(b),
+    '%': () => result = Number(a) / 100 * Number(b)
 }
 ```
-[ → ] - remove the last character on the display;
-[ c ] - clear button;
-backspace and clear button 
+[ +/- ] - change the mathematical sign of.
+
+[ → ] - remove the last character on the display.
+[ c ] - clear button.
 
 ### History div
 ```
