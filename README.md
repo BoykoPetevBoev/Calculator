@@ -27,7 +27,6 @@ const resultCalculations = {
 }
 ```
 [ +/- ] - change the mathematical sign of.
-
 [ → ] - remove the last character on the display.
 [ c ] - clear button.
 
