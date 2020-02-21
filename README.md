@@ -5,7 +5,7 @@ Commands for the online calculator you can enter not only the mouse, but with a 
 
 ## Opportunities
 
-[ 0 ], [ 1 ], [ 2 ], ... [ 9 ] - standard number keys.
+[ 0 ], [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ], [ 9 ] - standard number keys.
 
 [ 00 ] - key input 2 zeros.
 ```
