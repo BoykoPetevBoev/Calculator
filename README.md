@@ -38,6 +38,8 @@ const resultCalculations = {
 
 [ c ] - clear button.
 
+[ π ] - 3.141592653589793
+
 [ 1/2 ], [ 1/3 ], [ 2/3 ], [ 3/4 ], [ 7/8 ] - buttons.
 
 ### History div
