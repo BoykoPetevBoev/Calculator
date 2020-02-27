@@ -163,9 +163,9 @@ button:focus { outline: none; }
     margin-left: 50px;
     /* box-shadow: 0px 0px 10px rgb(0, 200, 0); */
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,183,0,1) 50%, rgba(0,0,0,1) 100%);
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,183,0,1) 50%, rgba(0,0,0,1) 100%); */
 }
-.info div {
+/* .info div {
     background-color: black;
     text-align: center;
     padding: 0px;
@@ -173,9 +173,7 @@ button:focus { outline: none; }
     border: solid;
     border-width: 0px;
     border-color: rgb(0, 200, 0);
-    padding: 1px;
-
-}
+} */
 #info2 {
     height: 284px;
 }
@@ -204,7 +202,7 @@ button:focus { outline: none; }
     background-color: black;
 
 }
-.historyBtn{
+.historyBtn, .title{
     color: white;
     width: 99%;
     height: 40px;
@@ -233,6 +231,11 @@ button:focus { outline: none; }
     background: rgb(15,187,0);
     background: radial-gradient(circle, rgba(15,187,0,1) 0%, rgba(0,0,0,1) 60%);
 }
+.title p {
+    margin: auto;
+    height: 40px;
+    padding-top: 7px;
+}
 .historyBtnEffect{
     padding: 1px;
     height: 40px;
@@ -240,6 +243,7 @@ button:focus { outline: none; }
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,136,0,1) 40%, rgba(0,136,0,1) 60%, rgba(0,0,0,1) 100%);
 }
+
 #one, #two, #three, #four, #five, #six, #seven, #eigh, #nine, #ten{
     height: 300px;
     width: 10%;
