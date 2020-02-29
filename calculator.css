@@ -1,5 +1,5 @@
 #result {
-    padding: auto;
+    padding: 10px;
     margin-bottom: 10px ;
     /* border: 1px solid rgb(15,187,0); */
     width: auto;
@@ -8,14 +8,14 @@
     box-shadow: 0px 0px 30px -5px rgba(15,187,0,1);
     background-color: black;
 }
-#result1 {
-    color: white;
-    font-size: 28px;
+#resultDiv {
+    color: rgb(15,187,0);
+    margin-top: 110px;
 }
-#result2 {
-    color: rgb(0, 200, 0);
-    font-size: 40px;
+#resultDiv p {
+    font-size: 35px;
 }
+
 #calculator {
     text-align: center;
     position: fixed;
@@ -67,9 +67,17 @@ button:active {
     color: black;
     border: none;
   }
-button:focus { outline: none; }
+button:focus { 
+    outline: none; }
 
 .operations {
     color: white;
     background-color: transparent;
+}
+.num, .sym {
+    float: right;
+    margin: 3px;
+}
+.num{
+    color: white;
 }
