@@ -137,8 +137,10 @@
         console.log(w, h)
         if (w < 700) {
             const calculator = document.getElementById('calculator');
+            const body = document.getElementById('body')
             calculator.style.height = '100%';
             calculator.style.width = '100%';
+            body.style.height = '300px';
         }
     }
     changeSize();
