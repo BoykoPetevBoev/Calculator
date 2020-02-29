@@ -18,9 +18,10 @@ header {
     
     border-bottom: solid;
     border-bottom-width: 1px;
-    border-bottom-color: rgb(15,187,0);
+    border-bottom-color: rgba(15,187,0,1);
     text-align: center;
     background: rgb(0,0,0);
+    box-shadow: 0px 0px 30px -5px rgba(15,187,0,1);
     /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,183,0,1) 50%, rgba(0,0,0,1) 100%); */
     padding: auto;
     /* box-shadow: 0px 0px 10px rgb(0, 200, 0); */
@@ -28,6 +29,21 @@ header {
     /* border: 1px solid;
     border-image: linear-gradient(1deg, rgb(15,187,0), black, black) 10; */
 }
+.clock {
+    background-color: black;
+    border: 1px solid black;
+    /* box-shadow: 0px 0px 10px rgb(0, 200, 0); */
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-image: linear-gradient(0deg, rgb(15,187,0), rgb(15,187,0), black, black) 1;
+    /* box-shadow: 0px 0px 30px -5px rgba(15,187,0,1); */
+}
+#time {
+    color: rgb(15,187,0);
+    font-size: 30px;
+}
+
 header img {
     float: left;
     height: 60px;
@@ -52,118 +68,20 @@ p{
     font-size: 20px;
     margin: 10px;
 }
-#calculator {
-    text-align: center;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    padding: 30px;
-    width: 605px;
-    height: 600px;
-    border: solid;
-    border-width: 0px;
-    border-color: rgb(15,187,0);
-    background-color: black;
-    background: rgb(15,187,0);
-    background: radial-gradient(circle, rgba(15,187,0,1) 0%, rgba(0,0,0,1) 60%);
-}
-.buttons {
-    width: 363px;
-    height: 284px;
-    float: left;
-    margin-bottom: 1px;
-}
-.operators {
-    margin: auto;
-    width: 120px;
-    height: 284px;
-    float: left;
-    margin-bottom: 1px;
-}
-.commands {
-    margin: auto;
-    width: 120px;
-    height: 284px;
-    float: left;
-    margin-left: 1px;
-}
-.sideBtn {
-    color: white;
-    width: 120px;
-}
-.moreBtns {
-    float: left;
-    width: 605px;
-    height: 140px;
-    margin-top: 10px;
-}
-#run {
-    height: 141px;
-    width: 120px;
-}
-button {
-    border: unset;
-    margin-bottom: 1px;
-    margin-left: 1px;
-    float: left;
-    font-size: 25px;
-    color: white;
-    background-color: black;
-    height: 70px;
-    width: 120px;
-}
-button:hover {
-    color: white;
-    background-color: rgba(201, 76, 76, 0);
-    border: 1px solid white;
-}
-button:active {
-    color: black;
-    border: none;
-  }
-button:focus { outline: none; }
-.operations {
-    color: white;
-    border-top: solid;
-    border-top-width: 00px;
-    border-top-color: red;
-    background-color: transparent;
-}
-#result {
-    padding: auto;
-    margin-top: 10px;
-    margin-bottom: 1px;
-    border: solid;
-    border-width: 0px;
-    border-color: white;
-    width: auto;
-    height: 120px;
-    color: rgb(0, 255, 0);
-    background-color: black;
-}
-#result1 {
-    color: white;
-    font-size: 28px;
-}
-#result2 {
-    color: rgb(0, 200, 0);
-    font-size: 40px;
-}
-.info {
-    padding-top: 0px;
-    border: solid;
-    border-width: 0px;
-    border-color: rgb(0, 200, 0);
+
+#leftSideDiv {
     float: left;
     width: 30%;
     margin-top: 50px;
     margin-left: 50px;
-    /* box-shadow: 0px 0px 10px rgb(0, 200, 0); */
     background: rgb(0,0,0);
-    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,183,0,1) 50%, rgba(0,0,0,1) 100%); */
+}
+#rightSideDiv {
+    float: right;
+    width: 30%;
+    margin-top: 50px;
+    margin-right: 50px;
+    background-color: black;
 }
 /* .info div {
     background-color: black;
@@ -189,19 +107,7 @@ button:focus { outline: none; }
 #infoAB p{
     font-size: 30px;
 }
-#historyDiv {
-    padding: 2px;
-    border-left: solid;
-    border-left-width: 0px;
-    border-left-color: rgb(0, 200, 0);
-    float: right;
-    width: 30%;
-    margin-top: 50px;
-    margin-right: 50px;
-    /* box-shadow: 0px 0px 10px rgb(0, 200, 0); */
-    background-color: black;
 
-}
 .historyBtn, .title{
     color: white;
     width: 99%;
@@ -244,26 +150,4 @@ button:focus { outline: none; }
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,136,0,1) 40%, rgba(0,136,0,1) 60%, rgba(0,0,0,1) 100%);
 }
 
-#one, #two, #three, #four, #five, #six, #seven, #eigh, #nine, #ten{
-    height: 300px;
-    width: 10%;
-    border: solid;
-    border-width: 0px;
-    border-color: white;
-    float: left;
-}
-.clock {
-    background-color: black;
-    border: 1px solid black;
-    /* box-shadow: 0px 0px 10px rgb(0, 200, 0); */
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid;
-    border-image: linear-gradient(0deg, rgb(15,187,0), rgb(15,187,0), black, black) 1;
-}
-#time {
-    color: rgb(15,187,0);
-    font-size: 30px;
-}
 
