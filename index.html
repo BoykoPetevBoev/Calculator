@@ -10,7 +10,8 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="calculator.css">
-    <script type="module" src="app.js"></script>
+    <script type="module" src="calculator.js"></script>
+    <!-- <script type="module" src="app.js"></script> -->
     <script src="dateAndTime.js"></script>
 </head>
 
@@ -62,11 +63,10 @@
 
     <div id="calculator">
         <div id="result">
-            <div class="result1">
-                <p id="result1"></p>
+            <div id="expression">
+
             </div>
-            <div class="result1">
-                <p id="result2"></p>
+            <div id="resultDiv">
             </div>
         </div>
 
@@ -130,6 +130,19 @@
         </a>
     </footer>
 </body>
+<script>
+    function changeSize() {
+        const h = window.innerHeight;
+        const w = window.innerWidth;
+        console.log(w, h)
+        if (w < 700) {
+            const calculator = document.getElementById('calculator');
+            calculator.style.height = '100%';
+            calculator.style.width = '100%';
+        }
+    }
+    changeSize();
+</script>
 <script>
     function clearHistory() {
         const history = document.getElementById('rightSideDiv');
