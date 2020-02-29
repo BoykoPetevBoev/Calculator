@@ -31,23 +31,25 @@ const calculations = {
 }
 let expressionElements = [];
 let resultElements = [];
+let endCalculation = false;
+let lockEqualButton = true;
 const maxLengthNum = 16;
 
 function eventHandler(value) {
     console.log(value)
-    if (numButtons.includes(value)) {
+    if (numButtons.includes(value) && !endCalculation) {
         createNum(value);
     }
-    else if (calculations.hasOwnProperty(value) && expressionElements.length !== 0) {
+    else if (calculations.hasOwnProperty(value) && expressionElements.length !== 0 && !endCalculation) {
         addOperation(value);
     }
-    else if (value === '=' && expressionElements.length !== 0) {
+    else if (value === '=' && expressionElements.length !== 0 && !endCalculation && !lockEqualButton) {
         showResult();
     }
     else if (value === 'clear' && expressionElements.length !== 0) {
         clearCalculation();
     }
-    else if (value === 'CE' && expressionElements.length !== 0) {
+    else if (value === 'CE' && expressionElements.length !== 0 && !endCalculation) {
         deleteLastChar(expressionElements, 0);
         expressionElements
     }
@@ -83,6 +85,9 @@ function createNum(sym) {
         sym = fixDotBugs(sym === '.', 'addZero', sym);
         expressionElements.unshift(sym);
     }
+    if(expressionElements.length >= 3){
+        lockEqualButton = false;
+    }
 }
 function addOperation(operator) {
     const lastElementIsNum = !calculations.hasOwnProperty(expressionElements[0]);
@@ -104,10 +109,10 @@ function fixDotBugs(condition, command, sym) {
 }
 function createDomElement(element, className, text) {
     const result = document.createElement(element);
-    if (className) {
+    if (className !== false) {
         result.className = className;
     }
-    if (text) {
+    if (text !== false) {
         result.textContent = text;
     }
     return result;
@@ -122,7 +127,7 @@ function printExpression() {
     });
 }
 function fillResultArray(resultElements) {
-    let domElement = '';
+    let domElement;
     expressionElements.forEach(element => {
         calculations.hasOwnProperty(element)
             ? domElement = createDomElement('p', 'sym', element)
@@ -137,31 +142,41 @@ function clearCalculation() {
     resultDiv.innerHTML = '';
     resultElements = [];
     expressionElements = [];
+    endCalculation = false
+    lockEqualButton = true;
 }
 function showResult() {
     const expression = expressionElements.slice(0);
-    const result = expressionHandler(expression)[0];
+    console.log(expression)
+    const result = expressionHandler(expression);
     const resultDiv = document.getElementById('resultDiv');
+    console.log(result)
     const domElement = createDomElement('p', false, result);
+    console.log(expression)
     resultDiv.appendChild(domElement);
+    endCalculation = true;
 }
 function expressionHandler(expression) {
     expression = calculationsInArray(expression, '/');
     expression = calculationsInArray(expression, 'x');
-    expression = calculationsInArray(expression, '+');
     expression = calculationsInArray(expression, '-');
+    expression = calculationsInArray(expression, '+');
     return expression;
 }
 function calculationsInArray(expression, operator) {
     let index = expression.indexOf(operator);
-    console.log(expression)
+
     while (index !== -1) {
         const a = Number(expression[index + 1]);
         const b = Number(expression[index - 1]);
+        if( isNaN(a) || isNaN(b)){
+            break;
+        }
         let result = calculations[operator](a, b);
+        console.log(a, b)
         expression.splice(index - 1, 3, result);
         index = expression.indexOf(operator);
-        console.log(expression)
+ 
     }
     return expression;
 }
