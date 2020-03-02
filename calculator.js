@@ -1,4 +1,5 @@
 startTime();
+import { printInfo } from './app.js';
 
 const calculator = document.getElementById('calculator');
 calculator.addEventListener('click', function (e) {
@@ -36,7 +37,6 @@ let lockEqualButton = true;
 const maxLengthNum = 16;
 
 function eventHandler(value) {
-    console.log(value)
     if (numButtons.includes(value) && !endCalculation) {
         createNum(value);
     }
@@ -85,16 +85,17 @@ function createNum(sym) {
         sym = fixDotBugs(sym === '.', 'addZero', sym);
         expressionElements.unshift(sym);
     }
-    if(expressionElements.length >= 3){
+    if (expressionElements.length >= 3) {
         lockEqualButton = false;
     }
 }
 function addOperation(operator) {
-    const lastElementIsNum = !calculations.hasOwnProperty(expressionElements[0]);
-    if (lastElementIsNum) {
-        expressionElements[0] = fixDotBugs(expressionElements[0].endsWith('.'), 'removeEndDot', expressionElements[0])
-        expressionElements.unshift(operator);
+    const lastElementIsOperator = calculations.hasOwnProperty(expressionElements[0]);
+    if (lastElementIsOperator) {
+        expressionElements.shift();
     }
+    expressionElements[0] = fixDotBugs(expressionElements[0].endsWith('.'), 'removeEndDot', expressionElements[0])
+    expressionElements.unshift(operator);
 }
 function fixDotBugs(condition, command, sym) {
     const oprions = {
@@ -147,14 +148,11 @@ function clearCalculation() {
 }
 function showResult() {
     const expression = expressionElements.slice(0);
-    console.log(expression)
     const result = expressionHandler(expression);
     const resultDiv = document.getElementById('resultDiv');
-    console.log(result)
     const domElement = createDomElement('p', false, result);
-    console.log(expression)
+    resultDiv.innerHTML = '';
     resultDiv.appendChild(domElement);
-    endCalculation = true;
 }
 function expressionHandler(expression) {
     expression = calculationsInArray(expression, '/');
@@ -165,27 +163,30 @@ function expressionHandler(expression) {
 }
 function calculationsInArray(expression, operator) {
     let index = expression.indexOf(operator);
-
+    if (calculations.hasOwnProperty(expression[0])) {
+        return;
+    }
     while (index !== -1) {
         const a = Number(expression[index + 1]);
         const b = Number(expression[index - 1]);
-        if( isNaN(a) || isNaN(b)){
+        if (isNaN(a) || isNaN(b)) {
             break;
         }
         let result = calculations[operator](a, b);
-        console.log(a, b)
+        console.log(`${a} ${operator} ${b} = ${result}`);
+        printInfo(`${a} ${operator} ${b}`, result);
         expression.splice(index - 1, 3, result);
         index = expression.indexOf(operator);
- 
+
     }
     return expression;
 }
-function  deleteLastChar(array, index){
+function deleteLastChar(array, index) {
     const text = array[index].toString();
-    if(text.length === 1){
+    if (text.length === 1) {
         array.splice(index, 1);
     }
-    else if(text.length > 1){
+    else if (text.length > 1) {
         array[index] = text.substring(0, text.length - 1);
     }
 }
