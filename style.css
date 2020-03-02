@@ -95,18 +95,6 @@ p{
 #info2 {
     height: 284px;
 }
-#info1 {
-    height: 200px;
-}
-#infoAB {
-    text-align: left;
-    color: rgb(0, 200, 0);
-    padding-left: 50px;
-    height: 150px;
-}
-#infoAB p{
-    font-size: 30px;
-}
 
 .historyBtn, .title{
     color: white;
@@ -148,6 +136,15 @@ p{
     font-size: 25px;
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,136,0,1) 40%, rgba(0,136,0,1) 60%, rgba(0,0,0,1) 100%);
+}
+.result {
+    color: rgba(15,187,0,1);
+    text-align: right;
+    border-bottom: 1px solid rgb(41, 41, 41);
+}
+.expression {
+    color: white;
+    text-align: left;
 }
 
 
