@@ -10,8 +10,8 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="calculator.css">
+    <script type="module" src="app.js"></script>
     <script type="module" src="calculator.js"></script>
-    <!-- <script type="module" src="app.js"></script> -->
     <script src="dateAndTime.js"></script>
 </head>
 
@@ -30,8 +30,6 @@
                 </div>
             </div>
             <div id="infoAB">
-                <p>A = 0</p>
-                <p>B = 0</p>
             </div>
         </div>
         <div id="info2">
@@ -140,7 +138,7 @@
             const body = document.getElementById('body')
             calculator.style.height = '100%';
             calculator.style.width = '100%';
-            body.style.height = '300px';
+            body.style.height = '100%';
         }
     }
     changeSize();
