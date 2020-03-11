@@ -8,6 +8,8 @@ Commands for the online calculator you can enter not only the mouse, but with a 
 [ 0 ], [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ], [ 9 ] - standard number keys.
 
 [ 00 ] - key input 2 zeros.
+
+[ . ] - floating point number.
 ```
 const validBtns = ['00', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 ```
